@@ -1,0 +1,37 @@
+create table departamento (
+id_departamento int not null auto_increment,
+nome varchar(50) not null,
+localizacao varchar(50),
+primary key(id_departamento)
+) default charset = utf8;
+
+
+create table funcionario (
+id_funcionario int not null auto_increment,
+nome varchar(50) not null,
+sobrenome varchar (50) not null,
+sexo enum ("M", "F"),
+email varchar(50) UNIQUE,
+ primary key(id_funcionario)
+) default charset = utf8;
+
+
+create table dependente (
+id_dependente int not null auto_increment,
+nome varchar(50),
+sobrenome varchar(50),
+sexo enum("M","F"),
+data_nascimento date,
+primary key(id_dependente)
+)default charset = utf8;
+
+
+create table projeto (
+id_projeto int not null auto_increment,
+nome varchar(50),
+localizacao varchar(100),
+data_inicio date,
+data_final date,
+orcamento int(10),
+primary key(id_projeto)
+)default charset = utf8;
