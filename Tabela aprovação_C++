@@ -1,0 +1,71 @@
+int main()
+{
+    string nome ;
+    int alunoA, alunoR, totalA, maiorOitoeMeio;
+    double n1, n2, n3, n4, mediaS, mediaT, somaMedia;
+    
+    totalA=0;
+    mediaT=0;
+    alunoA=0;
+    alunoR=0;
+    somaMedia=0;
+    maiorOitoeMeio=0;
+    
+    cout<<"Informe seu nome: ";
+    cin>>nome;
+    
+    while(nome !="ultimo"){
+        
+        totalA++;	#include <iostream>
+	using namespace std;
+
+
+
+        
+        cout<<"Informe a primeira nota";
+        cin>>n1;
+
+        cout<<"Informe a segunda nota";
+        cin>>n2;
+
+        cout<<"Informe a terceira nota";
+        cin>>n3;
+
+        cout<<"Informe a quarta nota";
+        cin>>n4;
+
+        
+        mediaS = (n1+n2+n3+n4) / 4;
+        somaMedia = somaMedia + mediaS;
+        mediaT =  somaMedia / totalA;
+        
+        
+        if (mediaS >=6){
+            alunoA++;
+            if(mediaS >=8.5){
+              maiorOitoeMeio++;  
+                        }
+        }else{
+            alunoR++;
+             }
+             
+        
+        cout<<"O total de alunos é: "<<totalA<<"\n";
+        cout<<"Total de alunos aprovados: "<<alunoA<<"\n";
+        cout<<"Total de alunos reprovados: "<<alunoR<<"\n";
+        cout<<"Média da turma: "<<mediaT<<"\n";
+        cout<<"Total de alunos com média maior que 8.5: "<<maiorOitoeMeio<<"\n";
+        cout<<"";
+        cout<<"";
+        cout<<"Informe seu nome: ";
+        cin>>nome;
+        
+        
+        
+        
+        
+        
+    }
+
+    return 0;
+}
