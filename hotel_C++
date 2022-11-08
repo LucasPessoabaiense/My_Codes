@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int diasHospedados, totalDiasHosp, refRealizadas, clienteQS, clienteQL;
+    double contaHotel, totalArrecadado, vDiaria, vRef;
+    string tipoQuarto, Enter;
+    
+    clienteQS = 0;
+    clienteQL = 0;
+    totalDiasHosp = 0;
+    totalArrecadado= 0;
+    
+    for (int i=0; i<5; i++){
+    cout << "SEJA BEM VINDO AO HOTEL CARÍCIA"<<"\n";
+    cout << "===ESCOLHA O TIPO DE QUARTO==="<<"\n";
+    cout << "==[LUXO - 0] | [SIMPLES - 1]=="<<"\n";
+    cin >> tipoQuarto;
+    
+    cout << "QUANTOS DIAS DE HOSPEDAGEM?";
+    cin >> diasHospedados;
+    
+    cout << "QUANTAS REFEÇÕES FORAM FEITAS POR DIA?";
+    cin >> refRealizadas;
+    
+    
+    totalDiasHosp= totalDiasHosp+diasHospedados;
+    
+    if (tipoQuarto == "1" ){
+        clienteQS++;
+        vRef = refRealizadas * 25;
+        vDiaria = 100;
+        contaHotel = (vRef + vDiaria) * diasHospedados;
+        
+        } else if  (tipoQuarto == "0"){
+        clienteQL++;
+        vRef = refRealizadas * 40;
+        vDiaria = 200;
+        contaHotel = (vRef + vDiaria) * diasHospedados;
+    }
+    
+    
+    totalArrecadado= totalArrecadado+ contaHotel;
+     system("clear");
+    cout<<"=============================================="<<"\n";
+    cout<<"=============================================="<<"\n";
+    cout<<"=============================================="<<"\n";
+    cout<<"Valor da sua conta: "<<contaHotel<<"\n";
+    cout<<"Obrigado pela preferência, volte sempre!"<<"\n";
+    cout<<"=============================================="<<"\n";
+    cout<<"=============================================="<<"\n";
+    cout<<"=============================================="<<"\n";
+    
+    }
+    cout<<"Total arrecadado: "<<totalArrecadado<<"\n";
+    cout<<"Total de hóspedes do quarto simples: "<<clienteQS<<"\n";
+    cout<<"Total de hóspedes do quarto luxo: "<<clienteQL<<"\n";
+    cout<<"Total de dias cobrados no geral: "<<totalDiasHosp<<"\n";
+    
+    return 0;
+}
+
