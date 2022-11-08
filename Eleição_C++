@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string tituloEleitor, letraCandidato, continua;
+    int candidatoA, candidatoB, nulo;
+    string vencedor;
+    
+    candidatoA = 0;
+    candidatoB = 0;
+    nulo = 0;
+    
+    cout << "-----DESEJA INICIAR A PESQUISA?-----";
+    cout << "\n[SIM] - INICIAR ou [FIM] - FINALIZAR" << endl;
+    cin >> continua;
+    
+    while ( continua != "FIM" ){
+    
+    cout << "TITULO DE ELEITOR: ";
+    cin >> tituloEleitor;
+    
+    cout << "LETRA DO CANDIDATO: ";
+    cout << "\nOPÇÕES DE CANDIDATO:";
+    cout << "\n[A] - [B] - [NULO]" << endl;
+    cin >> letraCandidato;
+
+    if (letraCandidato == "A"){
+        candidatoA++;
+    }
+    
+    if (letraCandidato == "B"){
+        candidatoB++;
+    }
+    
+    if (letraCandidato == "NULO"){
+        nulo++;
+    }
+    
+    cout << "\nDESEJA CONTINUAR A PESQUISA?";
+    cout << "\n[SIM] - CONTINUAR ou [FIM] - FINALIZAR" << endl;
+    cin >> continua;
+}
+    if (candidatoA > candidatoB){
+        cout << "\n>>> VENCEDOR DA ELEIÇÃO <<<";
+        cout << "\n[CANDIDATO A] VENCEU A ELEIÇÃO" << endl;
+    } else {
+        cout << "\n>>> VENCEDOR DA ELEIÇÃO <<<";
+        cout << "\n[CANDIDATO B] VENCEU A ELEIÇÃO" << endl;
+    }
+    
+cout << "\n------------- TOTAL DE VOTOS ----------------" ;   
+cout << "\nQUANTIDADE DE VOTOS CANDIDATO [A]: " << candidatoA;
+cout << "\nQUANTIDADE DE VOTOS CANDIDATO [B]: " << candidatoB;
+cout << "\nQUANTIDADE DE VOTOS [NULOS]: " << nulo;
+cout << "\n----------------------------------------------" ;
+
+    return 0;
+}
